@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align:center;">
+    <canvas id="c" width="500"  height="500" style="border-style:ridge; border-width: 1em; border-color:violet; border-radius: 100px;"></canvas>
+    <br><button style="background-color: orange; border-radius:20px; border-width:5 px; margin:10px;" onclick="var a=new Audio('c.mp3'); a.play();"><h1 style="font-size: 30px; color:white;">Click Me!</h1</button>
+    <script>
+        const ctx=document.getElementById("c");
+        const c=ctx.getContext("2d");
+        const image1 = new Image();
+        image1.src='b.jpg';
+        image1.addEventListener('load', function(){
+            c.drawImage(image1, 0, 0, ctx.width, ctx.height);
+        })
+    </script>
+    <style>
+        body{
+            background-image: url('a.gif');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment:fixed;
+            background-size:cover;
+        }
+    </style>
+</body>
+</html>
